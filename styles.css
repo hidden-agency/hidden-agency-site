@@ -244,11 +244,6 @@ p { margin: 0; }
 .final-inner { display: grid; justify-items: center; gap: 28px; }
 .final .lead { margin-top: 0; }
 
-/* manifeste */
-.manifesto { padding: clamp(80px, 10vw, 140px) 0; border-block: 1px solid var(--line); background: radial-gradient(50% 80% at 50% 50%, rgba(212, 175, 106, .07), transparent 70%), var(--ink-2); text-align: center; }
-.manifesto-text { max-width: 980px; margin: 0 auto; font-family: var(--f-display); font-size: clamp(24px, 3.2vw, 44px); line-height: 1.3; letter-spacing: .02em; text-transform: uppercase; }
-.manifesto-text .gold-text { font-size: 1.15em; }
-
 /* étapes */
 .steps { list-style: none; margin: 0; padding: 0; position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); }
 .steps::before { content: ""; position: absolute; left: 6px; right: 0; top: 6px; height: 1px; background: linear-gradient(90deg, var(--line-strong), var(--gold) 80%, var(--gold-hi)); }
