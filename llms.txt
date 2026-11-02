@@ -1,0 +1,17 @@
+# Hidden Agency
+
+> Agence digitale et IA (France) pour entrepreneurs, artisans et commerces. Point d'entrée : un diagnostic de croissance gratuit de 30 minutes en visio, qui révèle à quel palier l'entreprise bloque et quoi installer pour passer au suivant.
+
+## Le parcours en 4 paliers
+1. Être trouvé : l'entreprise n'apparaît pas sur Google ni dans les réponses des IA (ChatGPT, Perplexity). On installe : référencement Google, fiche locale, optimisation pour les moteurs IA.
+2. Convaincre : le site reçoit des visites mais pas de demandes. On installe : un site clair, rapide, conçu pour déclencher l'appel ou la commande.
+3. Remplir l'agenda : les clients arrivent de façon irrégulière. On installe : publicité TikTok, Snap et Meta, contenus, parcours de conversion.
+4. Sortir de l'opérationnel : relances, devis et messages sont gérés à la main. On installe : CRM, automatisations, agents IA.
+
+## Déroulé du diagnostic
+1. Réservation d'un créneau et deux questions sur l'activité.
+2. Analyse de la visibilité, du site, des canaux et des process avant l'appel.
+3. Restitution de 30 minutes en visio : palier actuel, blocages, priorités. Gratuit et sans engagement.
+
+## Pages
+- [Accueil et réservation du diagnostic](https://www.myhiddenagency.com/)
