@@ -354,6 +354,14 @@ p { margin: 0; }
 .assurances li { display: flex; align-items: center; gap: 10px; }
 .assurances li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); }
 
+/* pages légales */
+.legal { max-width: 820px; padding-top: 140px; padding-bottom: 96px; }
+.legal-updated { margin: 16px 0 48px; font-size: 13px; color: var(--muted); }
+.legal h2 { margin: 40px 0 12px; font-family: var(--f-display); font-size: 18px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-hi); }
+.legal p, .legal li { color: var(--text); line-height: 1.7; }
+.legal ul { padding-left: 20px; display: grid; gap: 8px; }
+.consent a { color: var(--gold-hi); }
+
 /* footer */
 .site-footer { border-top: 1px solid var(--line); padding: 40px 0 48px; }
 .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; font-size: 13px; color: var(--muted); }
