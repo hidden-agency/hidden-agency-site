@@ -17,4 +17,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://www.myhiddenagency.com/sitemap.xml
+Sitemap: https://hiddenagency.fr/sitemap.xml
