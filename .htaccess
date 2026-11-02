@@ -1,0 +1,8 @@
+# Une seule adresse : https://hiddenagency.fr (sans www)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.hiddenagency\.fr$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://hiddenagency.fr%{REQUEST_URI} [L,R=301]
+
+# Fichiers internes jamais servis
+RedirectMatch 404 /\.git
