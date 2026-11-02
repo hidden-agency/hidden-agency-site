@@ -171,7 +171,6 @@ p { margin: 0; }
 .section-head-center .kicker::after { content: ""; width: 40px; height: 1px; background: var(--gold); }
 .video-frame { position: relative; margin: 0 auto; max-width: 1040px; padding: clamp(8px, 1.2vw, 14px); border: 1px solid var(--line-strong); background: var(--ink); box-shadow: 0 50px 120px -40px rgba(0, 0, 0, .9), 0 0 120px -40px rgba(212, 175, 106, .35); }
 .video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
-.steps-cta.center { display: flex; justify-content: center; }
 
 .corner { position: absolute; width: 22px; height: 22px; border: 0 solid var(--gold); }
 .corner.tl { top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; }
@@ -237,7 +236,6 @@ p { margin: 0; }
 .result-call li { position: relative; padding-left: 22px; }
 .result-call li::before { content: ""; position: absolute; left: 2px; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); }
 
-.steps-cta { margin-top: 32px; }
 
 /* relance finale */
 .final { padding: clamp(96px, 12vw, 170px) 0; border-top: 1px solid var(--line); text-align: center; background: radial-gradient(50% 70% at 50% 50%, rgba(212, 175, 106, .1), transparent 70%); }

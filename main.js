@@ -24,7 +24,6 @@ function initHeader() {
   const toggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-menu]');
   const stickyCta = document.querySelector('[data-sticky-cta]');
-  const hero = document.querySelector('.hero');
   const booking = document.querySelector('#reserver');
 
   const setMenu = (open) => {
@@ -39,10 +38,9 @@ function initHeader() {
   const onScroll = () => {
     const y = window.scrollY;
     header.classList.toggle('is-scrolled', y > 24);
-    const pastHero = y > hero.offsetHeight * 0.7;
-    const rect = booking.getBoundingClientRect();
-    const atBooking = rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2;
-    stickyCta.classList.toggle('is-visible', pastHero && !atBooking);
+    // Le bouton collant ne revient qu'une fois le diagnostic dépassé, comme rappel.
+    const pastBooking = booking.getBoundingClientRect().bottom < 0;
+    stickyCta.classList.toggle('is-visible', pastBooking);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
