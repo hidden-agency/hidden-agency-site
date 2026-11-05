@@ -272,6 +272,11 @@ p { margin: 0; }
 .stars { display: flex; gap: 4px; }
 .stars i { width: 11px; height: 11px; background: var(--gold); clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
 
+/* lien avis trustpilot */
+.trust-band { padding: 22px var(--gutter); border-block: 1px solid var(--line); background: var(--ink-2); text-align: center; }
+.trust-band a { font-family: var(--f-display); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color .3s var(--ease); }
+.trust-band a:hover, .trust-band a:focus-visible { color: var(--gold-hi); }
+
 /* faq */
 .faq-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(40px, 6vw, 96px); }
 .faq details { border-top: 1px solid var(--line); padding: 28px 0; }
