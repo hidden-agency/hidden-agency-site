@@ -306,8 +306,19 @@
 
         <!-- Option 2 : prise de rendez-vous -->
         <div class="panel" id="panel-slot" role="tabpanel" aria-labelledby="tab-slot" hidden>
-          <div class="slot-embed" data-booking-embed>
-            <p class="slot-fallback">L'agenda s'affichera ici dès que le lien de réservation sera configuré.</p>
+          <div class="slot-card">
+            <p class="result-label">Appel découverte · 30 min · en visio</p>
+            <h3 class="slot-title">Choisis ton créneau</h3>
+            <ul class="result-call">
+              <li>On regarde ton site et tes réseaux avant l'appel.</li>
+              <li>On te montre ce qui bloque et par quoi commencer.</li>
+              <li>Tu repars avec ton plan, même si on ne travaille pas ensemble.</li>
+            </ul>
+            <a class="btn btn-gold btn-lg" href="#reserver" target="_blank" rel="noopener" data-agenda-link>
+              Voir les créneaux disponibles
+              <span class="btn-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+            <p class="meta">L'agenda s'ouvre dans un nouvel onglet.</p>
           </div>
           <a class="btn btn-ghost" href="#reserver" data-whatsapp hidden>Écrire sur WhatsApp</a>
         </div>
