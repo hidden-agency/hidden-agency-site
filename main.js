@@ -188,7 +188,20 @@ function initConstellation(canvas) {
   document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
 }
 
+// Projecteur doré qui suit le pointeur sur les cartes (souris uniquement).
+function initSpotlight() {
+  if (prefersReducedMotion || !window.matchMedia('(hover: hover)').matches) return;
+  document.querySelectorAll('[data-spot]').forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${event.clientY - rect.top}px`);
+    });
+  });
+}
+
 wireLinks();
 initHeader();
 initReveal();
+initSpotlight();
 document.querySelectorAll('[data-constellation]').forEach(initConstellation);

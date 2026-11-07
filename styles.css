@@ -623,3 +623,41 @@ p { margin: 0; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Projecteur au survol (cartes marquées data-spot) ---------- */
+[data-spot] { position: relative; }
+[data-spot]::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(241, 217, 160, .09), transparent 60%);
+  transition: opacity .5s var(--ease);
+}
+[data-spot]:hover::after { opacity: 1; }
+/* liseré doré qui suit aussi le pointeur */
+.tile::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 2;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 0%), rgba(241, 217, 160, .7), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0;
+  transition: opacity .5s var(--ease);
+}
+.tile:hover::before { opacity: 1; }
+
+/* indicateur de défilement sous le hero */
+.scroll-cue { position: absolute; left: 50%; bottom: 22px; z-index: 2; translate: -50% 0; width: 22px; height: 36px; border-radius: 12px; box-shadow: 0 0 0 1px var(--line-strong) inset; }
+.scroll-cue::after { content: ""; position: absolute; left: 50%; top: 8px; width: 3px; height: 7px; border-radius: 3px; translate: -50% 0; background: var(--gold-hi); animation: cue 2s var(--ease) infinite; }
+@keyframes cue { 0% { opacity: 0; transform: translateY(0); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(12px); } }
+@media (max-width: 760px) { .scroll-cue { display: none; } }
+
+/* titres de section : kicker en pastille, plus lisible */
+.section .kicker { width: fit-content; padding: 7px 14px 7px 0; }
+.section-title { text-wrap: balance; }
