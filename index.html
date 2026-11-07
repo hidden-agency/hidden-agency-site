@@ -120,30 +120,51 @@
   <main id="contenu">
     <!-- HERO -->
     <section class="hero" id="top">
+      <div class="hero-light" aria-hidden="true"><span class="hero-light-top"></span><span class="hero-light-rim"></span></div>
       <canvas class="constellation" data-constellation aria-hidden="true"></canvas>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow reveal"><span class="star" aria-hidden="true"></span>Agence digitale &amp; IA</p>
-          <h1 class="hero-title reveal">
-            <span class="line">Ce qui freine</span>
-            <span class="line">ta croissance</span>
-            <span class="line">est <em class="gold-text">caché.</em></span>
-          </h1>
-          <p class="lead reveal">En 2 minutes, le diagnostic te montre où ça bloque. En 30 minutes d'appel, on te montre comment débloquer.</p>
-          <div class="hero-actions reveal">
-            <a class="btn btn-gold" href="#reserver" data-booking>
-              Commencer mon diagnostic
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <span class="meta">100 % gratuit · sans engagement</span>
-          </div>
-        </div>
-
+      <div class="container hero-inner">
         <div class="hero-mark reveal">
           <img src="assets/logo-mark.webp" width="660" height="660" fetchpriority="high"
                alt="Logo Hidden Agency : bouclier noir et or, monogramme HA, constellation lumineuse et flèche de croissance">
         </div>
+        <p class="eyebrow reveal"><span class="star" aria-hidden="true"></span>Agence digitale &amp; IA</p>
+        <h1 class="hero-title reveal">
+          <span class="line">Ce qui freine ta croissance</span>
+          <span class="line">est <em class="glow-text" data-text="caché.">caché.</em></span>
+        </h1>
+        <p class="lead reveal">En 2 minutes, le diagnostic te montre où ça bloque. En 30 minutes d'appel, on te montre comment débloquer.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-gold" href="#reserver" data-booking>
+            Commencer mon diagnostic
+            <span class="btn-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+        <ul class="hero-proof reveal" aria-label="Ce que tu obtiens">
+          <li><strong>2 min</strong> le diagnostic</li>
+          <li><strong>30 min</strong> l'appel en visio</li>
+          <li><strong>100 %</strong> gratuit, sans engagement</li>
+        </ul>
       </div>
+      <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="glow-gold" color-interpolation-filters="sRGB" x="-50%" y="-200%" width="200%" height="500%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b4"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="b9"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="19" result="b19"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="b30"/>
+            <feColorMatrix in="b4" result="l0" type="matrix" values="1 0 0 0 0  0 .96 0 0 0  0 0 .86 0 0  0 0 0 .8 0"/>
+            <feColorMatrix in="b9" result="l1" type="matrix" values="1 0 0 0 0  0 .74 0 0 0  0 0 .36 0 0  0 0 0 .65 0"/>
+            <feOffset in="l1" result="l1o" dy="2"/>
+            <feColorMatrix in="b19" result="l2" type="matrix" values=".83 0 0 0 0  0 .62 0 0 0  0 0 .3 0 0  0 0 0 1 0"/>
+            <feOffset in="l2" result="l2o" dy="2"/>
+            <feColorMatrix in="b30" result="l3" type="matrix" values=".55 0 0 0 0  0 .38 0 0 0  0 0 .14 0 0  0 0 0 1 0"/>
+            <feOffset in="l3" result="l3o" dy="16"/>
+            <feColorMatrix in="b30" result="l4" type="matrix" values=".09 0 0 0 0  0 .14 0 0 0  0 0 .26 0 0  0 0 0 .9 0"/>
+            <feOffset in="l4" result="l4o" dy="48"/>
+            <feMerge><feMergeNode in="l0"/><feMergeNode in="l1o"/><feMergeNode in="l2o"/><feMergeNode in="l3o"/><feMergeNode in="l4o"/><feMergeNode in="l0"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+      </svg>
     </section>
 
     <!-- BANDEAU -->
@@ -294,36 +315,103 @@
           <p class="section-sub reveal">On ne saute pas d'étape : chaque palier franchi rend le suivant possible.</p>
         </header>
 
-        <ol class="leaks">
-          <li class="leak reveal">
-            <span class="numeral" aria-hidden="true">I</span>
-            <p class="leak-tag">Palier I</p>
-            <h3>Être trouvé</h3>
-            <p class="leak-symptom">Tu bloques ici si tes clients te cherchent et tombent sur tes concurrents.</p>
-            <p class="leak-fix"><strong>Ce qu'on installe</strong> Référencement Google, fiche locale, présence dans ChatGPT et Perplexity.</p>
+        <ol class="bento">
+          <!-- Palier I : être trouvé -->
+          <li class="tile tile-wide reveal">
+            <div class="tile-visual" aria-hidden="true">
+              <span class="tile-grid"></span>
+              <div class="vis-search">
+                <div class="vis-bar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg><span>ton métier près de chez moi</span></div>
+                <ol class="vis-results">
+                  <li class="is-you"><span class="vis-rank">1</span><span class="vis-name">Ton entreprise</span><span class="vis-stars"><i></i><i></i><i></i><i></i><i></i></span></li>
+                  <li><span class="vis-rank">2</span><span class="vis-line"></span></li>
+                  <li><span class="vis-rank">3</span><span class="vis-line short"></span></li>
+                </ol>
+              </div>
+            </div>
+            <div class="tile-body">
+              <p class="leak-tag">Palier I<span class="numeral">I</span></p>
+              <h3>Être trouvé</h3>
+              <p class="leak-symptom">Tu bloques ici si tes clients te cherchent et tombent sur tes concurrents.</p>
+              <p class="leak-fix"><strong>Ce qu'on installe</strong> Référencement Google, fiche locale, présence dans ChatGPT et Perplexity.</p>
+            </div>
           </li>
-          <li class="leak reveal">
-            <span class="numeral" aria-hidden="true">II</span>
-            <p class="leak-tag">Palier II</p>
-            <h3>Convaincre</h3>
-            <p class="leak-symptom">Tu bloques ici si ton site ou tes réseaux attirent des visites, mais pas de demandes.</p>
-            <p class="leak-fix"><strong>Ce qu'on installe</strong> Un site clair, rapide, construit pour déclencher l'appel ou la réservation.</p>
+
+          <!-- Palier II : convaincre -->
+          <li class="tile reveal">
+            <div class="tile-visual" aria-hidden="true">
+              <span class="tile-grid"></span>
+              <div class="vis-browser">
+                <div class="vis-chrome"><i></i><i></i><i></i></div>
+                <div class="vis-page">
+                  <span class="vis-h"></span><span class="vis-p"></span><span class="vis-p short"></span>
+                  <span class="vis-cta">Réserver</span>
+                  <svg class="vis-cursor" viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.6L10 19z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="tile-body">
+              <p class="leak-tag">Palier II<span class="numeral">II</span></p>
+              <h3>Convaincre</h3>
+              <p class="leak-symptom">Tu bloques ici si ton site ou tes réseaux attirent des visites, mais pas de demandes.</p>
+              <p class="leak-fix"><strong>Ce qu'on installe</strong> Un site clair, rapide, construit pour déclencher l'appel ou la réservation.</p>
+            </div>
           </li>
-          <li class="leak reveal">
-            <span class="numeral" aria-hidden="true">III</span>
-            <p class="leak-tag">Palier III</p>
-            <h3>Remplir l'agenda</h3>
-            <p class="leak-symptom">Tu bloques ici si tes clients arrivent par vagues, puis plus rien.</p>
-            <p class="leak-fix"><strong>Ce qu'on installe</strong> Publicité TikTok, Snap et Meta, contenus et parcours qui amènent des demandes chaque semaine.</p>
+
+          <!-- Palier III : remplir l'agenda -->
+          <li class="tile reveal">
+            <div class="tile-visual" aria-hidden="true">
+              <span class="tile-grid"></span>
+              <div class="vis-week">
+                <span class="vis-day">L</span><span class="vis-day">M</span><span class="vis-day">M</span><span class="vis-day">J</span><span class="vis-day">V</span>
+                <i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i>
+                <i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i>
+                <i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i>
+              </div>
+            </div>
+            <div class="tile-body">
+              <p class="leak-tag">Palier III<span class="numeral">III</span></p>
+              <h3>Remplir l'agenda</h3>
+              <p class="leak-symptom">Tu bloques ici si tes clients arrivent par vagues, puis plus rien.</p>
+              <p class="leak-fix"><strong>Ce qu'on installe</strong> Publicité TikTok, Snap et Meta, contenus et parcours qui amènent des demandes chaque semaine.</p>
+            </div>
           </li>
-          <li class="leak reveal">
-            <span class="numeral" aria-hidden="true">IV</span>
-            <p class="leak-tag">Palier IV</p>
-            <h3>Sortir de l'opérationnel</h3>
-            <p class="leak-symptom">Tu bloques ici si relances, devis et messages reposent encore sur toi.</p>
-            <p class="leak-fix"><strong>Ce qu'on installe</strong> CRM, automatisations et agents IA qui font le répétitif à ta place.</p>
+
+          <!-- Palier IV : sortir de l'opérationnel -->
+          <li class="tile tile-wide tile-lit reveal">
+            <div class="tile-visual" aria-hidden="true">
+              <span class="tile-grid"></span>
+              <div class="vis-flow">
+                <span class="vis-node">Message</span>
+                <span class="vis-link"><i></i></span>
+                <span class="vis-node vis-node-ai">Agent IA</span>
+                <span class="vis-link"><i></i></span>
+                <span class="vis-node">CRM</span>
+                <span class="vis-link"><i></i></span>
+                <span class="vis-node">Relance</span>
+              </div>
+            </div>
+            <div class="tile-body">
+              <p class="leak-tag">Palier IV<span class="numeral">IV</span></p>
+              <h3>Sortir de l'opérationnel</h3>
+              <p class="leak-symptom">Tu bloques ici si relances, devis et messages reposent encore sur toi.</p>
+              <p class="leak-fix"><strong>Ce qu'on installe</strong> CRM, automatisations et agents IA qui font le répétitif à ta place.</p>
+            </div>
           </li>
         </ol>
+
+        <div class="toolbelt reveal">
+          <p class="toolbelt-title">Ce qu'on met en place</p>
+          <div class="toolbelt-track" aria-hidden="true">
+            <div class="toolbelt-set">
+              <span>Google</span><span>Fiche locale</span><span>ChatGPT</span><span>Perplexity</span><span>Site web</span><span>Meta</span><span>TikTok</span><span>Snap</span><span>CRM</span><span>Automatisations</span><span>Agents IA</span>
+            </div>
+            <div class="toolbelt-set">
+              <span>Google</span><span>Fiche locale</span><span>ChatGPT</span><span>Perplexity</span><span>Site web</span><span>Meta</span><span>TikTok</span><span>Snap</span><span>CRM</span><span>Automatisations</span><span>Agents IA</span>
+            </div>
+          </div>
+          <p class="sr-only">Google, fiche locale, ChatGPT, Perplexity, site web, Meta, TikTok, Snap, CRM, automatisations et agents IA.</p>
+        </div>
       </div>
     </section>
 
@@ -433,12 +521,13 @@
 
     <!-- RELANCE FINALE -->
     <section class="final" aria-labelledby="final-titre">
+      <div class="hero-light hero-light-low" aria-hidden="true"><span class="hero-light-top"></span><span class="hero-light-rim"></span></div>
       <div class="container final-inner">
-        <h2 class="booking-title reveal" id="final-titre">Chaque mois où rien ne change<br><em class="gold-text">a un prix.</em></h2>
+        <h2 class="booking-title reveal" id="final-titre">Chaque mois où rien ne change<br><em class="glow-text" data-text="a un prix.">a un prix.</em></h2>
         <p class="lead reveal">Deux minutes pour savoir où ça bloque. C'est le plus petit pas possible.</p>
         <a class="btn btn-gold btn-lg reveal" href="#reserver">
           Commencer mon diagnostic
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="btn-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
     </section>
