@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-b.css">
   <script>document.documentElement.classList.add('js')</script>
 
   <script type="application/ld+json">
@@ -85,7 +86,7 @@
   }
   </script>
 </head>
-<body>
+<body class="theme-b">
   <a class="skip" href="#contenu">Aller au contenu</a>
 
   <header class="site-header" data-header>
@@ -119,31 +120,44 @@
 
   <main id="contenu">
     <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero-light" aria-hidden="true"><span class="hero-light-top"></span><span class="hero-light-rim"></span></div>
+    <section class="hero hero-b" id="top">
       <canvas class="constellation" data-constellation aria-hidden="true"></canvas>
-      <div class="container hero-inner">
-        <div class="hero-mark reveal">
-          <img src="assets/logo-mark.webp" width="660" height="660" fetchpriority="high"
+      <div class="container hero-split">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="star" aria-hidden="true"></span>Agence digitale &amp; IA</p>
+          <h1 class="hero-title reveal">
+            <span class="line">Ce qui freine</span>
+            <span class="line">ta croissance</span>
+            <span class="line">est <em class="glow-text" data-text="caché.">caché.</em></span>
+          </h1>
+          <p class="lead reveal">En 2 minutes, le diagnostic te montre où ça bloque. En 30 minutes d'appel, on te montre comment débloquer.</p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-gold" href="#reserver" data-booking>
+              Commencer mon diagnostic
+              <span class="btn-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+            <span class="meta">100 % gratuit · sans engagement</span>
+          </div>
+        </div>
+
+        <div class="hero-demo reveal">
+          <img class="demo-mark" src="assets/logo-mark.webp" width="660" height="660" fetchpriority="high"
                alt="Logo Hidden Agency : bouclier noir et or, monogramme HA, constellation lumineuse et flèche de croissance">
-        </div>
-        <p class="eyebrow reveal"><span class="star" aria-hidden="true"></span>Agence digitale &amp; IA</p>
-        <h1 class="hero-title reveal">
-          <span class="line">Ce qui freine ta croissance</span>
-          <span class="line">est <em class="glow-text" data-text="caché.">caché.</em></span>
-        </h1>
-        <p class="lead reveal">En 2 minutes, le diagnostic te montre où ça bloque. En 30 minutes d'appel, on te montre comment débloquer.</p>
-        <div class="hero-actions reveal">
-          <a class="btn btn-gold" href="#reserver" data-booking>
-            Commencer mon diagnostic
-            <span class="btn-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <a class="demo-card" href="#reserver" data-booking aria-label="Commencer le diagnostic : 7 questions, 2 minutes">
+            <span class="demo-head" aria-hidden="true"><span>Diagnostic</span><span>Question 1 sur 7</span></span>
+            <span class="demo-bar" aria-hidden="true"><i></i></span>
+            <span class="demo-q" aria-hidden="true">Quelle est ton activité&nbsp;?</span>
+            <span class="demo-opts" aria-hidden="true">
+              <span>Beauté · coiffure · barber</span>
+              <span>Prestation de services</span>
+              <span>Artisan · BTP</span>
+              <span>Commerce · restauration</span>
+            </span>
+            <span class="demo-foot" aria-hidden="true">Continuer <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </a>
+          <span class="demo-badge demo-badge-top" aria-hidden="true"><b>Ton palier</b> en 2 min</span>
+          <span class="demo-badge demo-badge-bottom" aria-hidden="true"><b>Appel offert</b> 30 min en visio</span>
         </div>
-        <ul class="hero-proof reveal" aria-label="Ce que tu obtiens">
-          <li><strong>2 min</strong> le diagnostic</li>
-          <li><strong>30 min</strong> l'appel en visio</li>
-          <li><strong>100 %</strong> gratuit, sans engagement</li>
-        </ul>
       </div>
       <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
         <defs>
