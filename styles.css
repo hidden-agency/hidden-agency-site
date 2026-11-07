@@ -132,7 +132,7 @@ p { margin: 0; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; transition: height .5s var(--ease), margin .5s var(--ease), background .5s var(--ease), box-shadow .5s var(--ease), border-radius .5s var(--ease); }
 .site-header.is-scrolled .header-inner { height: 62px; margin-top: 10px; max-width: calc(var(--max) - 2 * var(--gutter)); border-radius: 16px; background: rgba(13, 14, 17, .78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 0 0 1px var(--line) inset, 0 20px 50px -20px rgba(0, 0, 0, .8); }
 .brand { display: flex; align-items: center; gap: 14px; color: var(--text); text-decoration: none; }
-.brand-mark { width: 32px; height: 36px; }
+.brand-mark { width: 44px; height: 44px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .6)); }
 .brand-name { font-family: var(--f-display); font-weight: 600; font-size: 15px; letter-spacing: .26em; text-transform: uppercase; }
 .nav { display: flex; align-items: center; gap: 36px; }
 .nav a:not(.btn) { color: var(--muted); text-decoration: none; font-size: 14px; letter-spacing: .04em; transition: color .3s; }
