@@ -301,28 +301,14 @@ function initQuiz() {
 function initModes() {
   const tabs = [...document.querySelectorAll('[data-mode]')];
   if (!tabs.length) return;
-  const embed = document.querySelector('[data-booking-embed]');
-
-  // Paramètres d'intégration Calendly et couleurs de la DA (les couleurs ne s'appliquent qu'avec un compte Calendly payant).
-  const agendaUrl = () => {
+  // L'agenda Calendly gratuit reste blanc en intégration : on ouvre l'agenda dans un nouvel onglet,
+  // depuis une carte aux couleurs du site.
+  document.querySelectorAll('[data-agenda-link]').forEach((link) => {
+    if (!CONFIG.BOOKING_URL) { link.hidden = true; return; }
     const url = new URL(CONFIG.BOOKING_URL);
-    url.searchParams.set('embed_domain', window.location.hostname);
-    url.searchParams.set('embed_type', 'Inline');
     url.searchParams.set('hide_gdpr_banner', '1');
-    url.searchParams.set('background_color', '0b0b0c');
-    url.searchParams.set('text_color', 'ede7db');
-    url.searchParams.set('primary_color', 'd4af6a');
-    return url.toString();
-  };
-
-  const loadAgenda = () => {
-    if (!CONFIG.BOOKING_URL || embed.querySelector('iframe')) return;
-    const frame = document.createElement('iframe');
-    frame.src = agendaUrl();
-    frame.title = 'Choisir un créneau pour ton diagnostic';
-    frame.loading = 'lazy';
-    embed.replaceChildren(frame);
-  };
+    link.href = url.toString();
+  });
 
   const select = (mode) => {
     tabs.forEach((tab) => {
@@ -331,7 +317,6 @@ function initModes() {
       tab.tabIndex = active ? 0 : -1;
       document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
     });
-    if (mode === 'slot') loadAgenda();
   };
 
   tabs.forEach((tab, i) => {
