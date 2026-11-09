@@ -2,8 +2,8 @@
 const CONFIG = {
   BOOKING_URL: 'https://calendly.com/contact-myhiddenagency/appel-decouverte', // agenda intégré
   WHATSAPP_URL: '', // ex. https://wa.me/33600000000
-  // Workflow n8n « Hidden Agency · Diagnostic site » (RzE1E4kET6HHacAa) → table « Diagnostics site » + alerte email
-  LEAD_WEBHOOK_URL: 'https://nans952.app.n8n.cloud/webhook/hidden-agency-diagnostic',
+  // Workflow n8n Hostinger « Hidden Agency · Diagnostic site » (UffX7Vc49kI7Bc2v) → table « Diagnostics site » + alerte email
+  LEAD_WEBHOOK_URL: 'https://n8n.srv2129093.hstgr.cloud/webhook/hidden-agency-diagnostic',
 };
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
